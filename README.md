@@ -15,8 +15,8 @@ graph TD
     end
 
     subgraph Ingestion Layer
-        Debezium(Debezium CDC Connector)
-        Kafka(Apache Kafka)
+        Debezium["Debezium CDC Connector"]
+        Kafka["Apache Kafka"]
     end
 
     subgraph Cloud Storage (ADLS2)
@@ -26,13 +26,13 @@ graph TD
     end
 
     subgraph Processing Layer (Databricks)
-        Databricks_SS(Databricks Structured Streaming)
-        Databricks_DLT(Databricks Delta Live Tables)
+        Databricks_SS["Databricks Structured Streaming"]
+        Databricks_DLT["Databricks Delta Live Tables"]
     end
 
     subgraph Consumption Layer
         SQL_Serverless["SQL Serverless Warehouse / Databricks SQL Endpoint"]
-        PowerBI(Power BI Reports & Dashboards)
+        PowerBI["Power BI Reports & Dashboards"]
     end
 
     MySQL -- CDC --> Debezium
@@ -43,6 +43,7 @@ graph TD
     ADLS2_Silver -- DLT (Silver to Gold, SCD Type 2) --> ADLS2_Gold
     ADLS2_Gold -- Query --> SQL_Serverless
     SQL_Serverless -- Connect --> PowerBI
+
 ```
 
 ## Key Components and Data Flow

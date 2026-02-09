@@ -19,7 +19,7 @@ graph TD
         Kafka["Apache Kafka"]
     end
 
-    subgraph Cloud Storage (ADLS2)
+     subgraph "Cloud Storage (ADLS2)"
         ADLS2_Bronze["ADLS2 - Bronze Layer (Raw JSON)"]
         ADLS2_Silver["ADLS2 - Silver Layer (Cleaned & Conformed)"]
         ADLS2_Gold["ADLS2 - Gold Layer (Aggregated & Business-Ready)"]

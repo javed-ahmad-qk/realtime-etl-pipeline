@@ -1,5 +1,5 @@
 {
-  "name": "mysql-banking-connector",
+  "name": "finstream-banking-connector",
   "config": {
     "connector.class": "io.debezium.connector.mysql.MySqlConnector",
     "tasks.max": "1",
@@ -8,16 +8,17 @@
     "database.user": "debezium_user",
     "database.password": "debezium_password",
     "database.server.id": "1000",
-    "database.server.name": "mysql_banking_server",
+    "database.server.name": "dbserver1",
     "database.include.list": "banking_db",
-    "table.include.list": "banking_db.customer,banking_db.account,banking_db.atm_transaction,banking_db.loan,banking_db.card,banking_db.transaction_type,banking_db.branch,banking_db.employee,banking_db.address,banking_db.contact,banking_db.audit_log,banking_db.product,banking_db.service",
-    "database.history.kafka.bootstrap.servers": "your_kafka_broker:9092",
-    "database.history.kafka.topic": "dbhistory.banking",
+    "table.include.list": "banking_db.customers,banking_db.accounts,banking_db.atm_transactions,banking_db.loans,banking_db.cards,banking_db.branches,banking_db.employees,banking_db.transaction_types,banking_db.audit_logs,banking_db.products,banking_db.services,banking_db.transaction_details,banking_db.merchants",
+    "database.history.kafka.bootstrap.servers": "your_kafka_broker_1:9092,your_kafka_broker_2:9092",
+    "database.history.kafka.topic": "dbhistory.banking_db",
     "include.schema.changes": "false",
-    "topic.prefix": "mysql.banking",
+    "topic.prefix": "dbserver1.banking_db",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "value.converter.schemas.enable": "false",
     "key.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "key.converter.schemas.enable": "false"
+    "key.converter.schemas.enable": "false",
+    "snapshot.mode": "initial" # Perform an initial snapshot of existing data
   }
 }

@@ -1,67 +1,67 @@
 [
   {
-    "name": "mysql.banking.customer",
-    "partitions": 3,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.customers",
+    "partitions": 6,
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.account",
-    "partitions": 3,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.accounts",
+    "partitions": 6,
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.atm_transaction",
-    "partitions": 5,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.atm_transactions",
+    "partitions": 12,
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.loan",
-    "partitions": 3,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.loans",
+    "partitions": 4,
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.card",
-    "partitions": 3,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.cards",
+    "partitions": 4,
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.transaction_type",
-    "partitions": 1,
-    "replication_factor": 1
-  },
-  {
-    "name": "mysql.banking.branch",
-    "partitions": 1,
-    "replication_factor": 1
-  },
-  {
-    "name": "mysql.banking.employee",
+    "name": "dbserver1.banking_db.branches",
     "partitions": 2,
-    "replication_factor": 1
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.address",
-    "partitions": 2,
-    "replication_factor": 1
-  },
-  {
-    "name": "mysql.banking.contact",
-    "partitions": 2,
-    "replication_factor": 1
-  },
-  {
-    "name": "mysql.banking.audit_log",
+    "name": "dbserver1.banking_db.employees",
     "partitions": 3,
-    "replication_factor": 1
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.product",
-    "partitions": 1,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.transaction_types",
+    "partitions": 2,
+    "replication_factor": 3
   },
   {
-    "name": "mysql.banking.service",
-    "partitions": 1,
-    "replication_factor": 1
+    "name": "dbserver1.banking_db.audit_logs",
+    "partitions": 8,
+    "replication_factor": 3
+  },
+  {
+    "name": "dbserver1.banking_db.products",
+    "partitions": 2,
+    "replication_factor": 3
+  },
+  {
+    "name": "dbserver1.banking_db.services",
+    "partitions": 2,
+    "replication_factor": 3
+  },
+  {
+    "name": "dbserver1.banking_db.transaction_details",
+    "partitions": 10,
+    "replication_factor": 3
+  },
+  {
+    "name": "dbserver1.banking_db.merchants",
+    "partitions": 3,
+    "replication_factor": 3
   }
 ]

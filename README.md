@@ -1,6 +1,6 @@
-# realtime-etl-pipeline: Real-time Banking Data ETL with Medallion Architecture
+# FinStream-CDC: Real-time Banking Data ETL with Medallion Architecture
 
-realtime-etl-pipeline is a comprehensive, real-time Extract, Transform, Load (ETL) pipeline designed for banking data analytics and live dashboarding. It leverages Change Data Capture (CDC) to ingest data from a MySQL transactional database, processes it through a Medallion Architecture on Databricks, and delivers insights to Power BI for business intelligence.
+FinStream-CDC is a comprehensive, real-time Extract, Transform, Load (ETL) pipeline designed for banking data analytics and live dashboarding. It leverages Change Data Capture (CDC) to ingest data from a MySQL transactional database, processes it through a Medallion Architecture on Databricks, and delivers insights to Power BI for business intelligence.
 
 ## Project Overview
 
@@ -11,7 +11,7 @@ This project establishes a robust and scalable data pipeline for banking operati
 ```mermaid
 graph TD
     subgraph Source Systems
-        MySQL[MySQL DB (13 Tables)]
+        MySQL["MySQL DB (13 Tables)"]
     end
 
     subgraph Ingestion Layer
@@ -20,9 +20,9 @@ graph TD
     end
 
     subgraph Cloud Storage (ADLS2)
-        ADLS2_Bronze[ADLS2 - Bronze Layer (Raw JSON)]
-        ADLS2_Silver[ADLS2 - Silver Layer (Cleaned & Conformed)]
-        ADLS2_Gold[ADLS2 - Gold Layer (Aggregated & Business-Ready)]
+        ADLS2_Bronze["ADLS2 - Bronze Layer (Raw JSON)"]
+        ADLS2_Silver["ADLS2 - Silver Layer (Cleaned & Conformed)"]
+        ADLS2_Gold["ADLS2 - Gold Layer (Aggregated & Business-Ready)"]
     end
 
     subgraph Processing Layer (Databricks)
@@ -31,7 +31,7 @@ graph TD
     end
 
     subgraph Consumption Layer
-        SQL_Serverless[SQL Serverless Warehouse / Databricks SQL Endpoint]
+        SQL_Serverless["SQL Serverless Warehouse / Databricks SQL Endpoint"]
         PowerBI(Power BI Reports & Dashboards)
     end
 
@@ -123,7 +123,7 @@ FinStream-CDC/
 │   └── kafka_topics.json               # Kafka topic definitions
 ├── sql_scripts/                        # SQL scripts for Gold layer views/tables
 │   └── gold_layer_views.sql            # SQL views for Power BI consumption
-└── powerbi_templates/                  # Power BI report templates
+└── powerbi_templates/                  # Power BI report templates (optional)
     └── finstream_dashboard.pbix        # Power BI report template
 ```
 

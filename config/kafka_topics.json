@@ -1,0 +1,67 @@
+[
+  {
+    "name": "mysql.banking.customer",
+    "partitions": 3,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.account",
+    "partitions": 3,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.atm_transaction",
+    "partitions": 5,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.loan",
+    "partitions": 3,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.card",
+    "partitions": 3,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.transaction_type",
+    "partitions": 1,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.branch",
+    "partitions": 1,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.employee",
+    "partitions": 2,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.address",
+    "partitions": 2,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.contact",
+    "partitions": 2,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.audit_log",
+    "partitions": 3,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.product",
+    "partitions": 1,
+    "replication_factor": 1
+  },
+  {
+    "name": "mysql.banking.service",
+    "partitions": 1,
+    "replication_factor": 1
+  }
+]

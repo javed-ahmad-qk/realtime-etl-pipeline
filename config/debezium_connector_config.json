@@ -1,0 +1,23 @@
+{
+  "name": "mysql-banking-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",
+    "database.hostname": "your_mysql_host",
+    "database.port": "3306",
+    "database.user": "debezium_user",
+    "database.password": "debezium_password",
+    "database.server.id": "1000",
+    "database.server.name": "mysql_banking_server",
+    "database.include.list": "banking_db",
+    "table.include.list": "banking_db.customer,banking_db.account,banking_db.atm_transaction,banking_db.loan,banking_db.card,banking_db.transaction_type,banking_db.branch,banking_db.employee,banking_db.address,banking_db.contact,banking_db.audit_log,banking_db.product,banking_db.service",
+    "database.history.kafka.bootstrap.servers": "your_kafka_broker:9092",
+    "database.history.kafka.topic": "dbhistory.banking",
+    "include.schema.changes": "false",
+    "topic.prefix": "mysql.banking",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false"
+  }
+}

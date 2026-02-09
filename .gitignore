@@ -1,0 +1,27 @@
+# Databricks / Spark
+.ipynb_checkpoints/
+spark-warehouse/
+metastore_db/
+
+# Python
+__pycache__/
+*.pyc
+*.log
+
+# Environment variables
+.env
+.venv
+
+# Debezium / Kafka
+connect-distributed.properties
+connect-standalone.properties
+
+# Local data files
+*.csv
+*.json
+*.parquet
+*.delta
+
+# OS generated files
+.DS_Store
+Thumbs.db

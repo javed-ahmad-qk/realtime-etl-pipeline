@@ -1,0 +1,3 @@
+pyspark
+deltalake
+kakfa-python

@@ -25,7 +25,7 @@ graph TD
         ADLS2_Gold["ADLS2 - Gold Layer (Aggregated & Business-Ready)"]
     end
 
-    subgraph Processing Layer (Databricks)
+    subgraph "Processing Layer (Databricks)"
         Databricks_SS["Databricks Structured Streaming"]
         Databricks_DLT["Databricks Delta Live Tables"]
     end

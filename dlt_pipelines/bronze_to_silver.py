@@ -9,8 +9,6 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 
 # Define the schema for the Debezium CDC event payload
-# This is a simplified schema; a real-world scenario would require a more detailed schema
-# based on the specific tables being captured by Debezium.
 # Example structure for a Debezium message 'value' field:
 # {
 #   "before": { ... },
@@ -67,6 +65,4 @@ def silver_banking_data():
 
     return silver_df
 
-# Note: In a real DLT setup, you would define separate DLT tables for each source_table
-# or use dynamic logic within a single DLT table to handle different schemas.
-# For simplicity, this example shows a generic parsing step.
+

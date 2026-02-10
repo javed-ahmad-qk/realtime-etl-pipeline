@@ -110,7 +110,7 @@ ADLS2 serves as the primary, scalable, and cost-effective storage layer, impleme
 ## Project Structure
 
 ```
-FinStream-CDC/
+Realtime-ETL-Pipeline/
 ├── README.md                           # Project overview and architecture documentation
 ├── requirements.txt                    # Python dependencies for Databricks notebooks
 ├── banking_schema.py                   # Defines realistic Pyspark schemas for all 13 banking tables
